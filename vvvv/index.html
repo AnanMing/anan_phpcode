@@ -1,0 +1,15 @@
+<p>更新包大小：<span id="file-size">0</span> Bytes</p>
+<!-- 进度条 -->
+<div class="progress">
+    <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+        <span id="imported-progress">0</span>%
+    </div>
+</div>
+
+<script>
+// 更新进度条的函数
+function updateProgress(progress) {
+    $('#imported-progress').html(progress);
+    $('.progress-bar').css('width', progress+'%').attr('aria-valuenow', progress);
+}
+</script>
